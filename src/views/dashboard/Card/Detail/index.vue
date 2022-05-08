@@ -1,0 +1,67 @@
+<template>
+  <div>
+    <div class="card-header">
+      <span>{{ title }}</span>
+      <svg
+        t="1643014263688"
+        class="icon"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="1231"
+        width="14"
+        height="14"
+      >
+        <path
+          d="M511.999436 0.000376c-282.769574 0-511.999059 229.230238-511.99906 511.999436s229.229486 511.999436 511.99906 511.999435c282.769197 0 511.998683-229.230238 511.998683-511.999435S794.768633 0.000376 511.999436 0.000376z m-0.000753 991.998695c-265.095346 0-479.998507-214.90316-479.998507-479.999259S246.903336 32.000553 511.998683 32.000553c265.096475 0 479.999635 214.90316 479.999635 479.999259s-214.90316 479.999259-479.999635 479.999259z"
+          fill=""
+          p-id="1232"
+        ></path>
+        <path
+          d="M511.998683 223.999353m-32.000176 0a32.000176 32.000176 0 1 0 64.000352 0 32.000176 32.000176 0 1 0-64.000352 0Z"
+          fill=""
+          p-id="1233"
+        ></path>
+        <path
+          d="M543.999236 799.999518c0 17.673475-14.327078 31.9998-32.000553 31.9998-17.672722 0-31.9998-14.326325-31.9998-31.9998V351.999683c0-17.673098 14.327078-31.9998 31.9998-31.999801 17.673475 0 32.000553 14.326702 32.000553 31.999801v447.999835z"
+          fill=""
+          p-id="1234"
+        ></path>
+      </svg>
+    </div>
+    <div class="card-content">{{ count }}</div>
+    <div class="card-charts">
+      <slot name="charts"></slot>
+    </div>
+    <div class="card-footer">
+      <slot name="footer"></slot>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Detail',
+  props: ['title', 'count']
+}
+</script>
+
+<style scoped>
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  font-size: 14px;
+}
+.card-content {
+  font-size: 30px;
+  padding: 10px 0;
+}
+.card-charts {
+  height: 50px;
+}
+.card-footer {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+</style>
